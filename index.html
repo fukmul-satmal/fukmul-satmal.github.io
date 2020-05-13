@@ -20,6 +20,12 @@ jQuery( function() {
     jQuery( '#current_url' ).text( location.href );
 } );
 
+if (('sessionStorage' in window) && (window.sessionStrage !== null)) {
+    $('body').html('sessionStrage利用可');
+}
+else {
+    $('body').html('sessionStrage利用不可');
+}
 </script>
 </body>
 </html>
