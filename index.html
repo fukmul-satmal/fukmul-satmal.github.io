@@ -11,20 +11,12 @@
   <h1>GitHub Pages のサンプル (ユーザーページ)</h1>
   <a href="https://fukmul-satmal.github.io/ghpages_test_01/">__次へ__</a>
   <p id="current_url"></p>
-  <p id="check_session"></p>
 </main>
 
 <script>
 console.log('GitHub Pages User Pages');
 
 jQuery( function() {
-    if (sesseinStrage !== null) {
-        jQuery( '#check_session' ).text('sessionStrage利用可');
-    }
-    else {
-        jQuery( '#check_session' ).text('sessionStrage利用不可');
-    }
-
     jQuery( '#current_url' ).text( location.href );
 } );
 
