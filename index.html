@@ -4,6 +4,20 @@
 <meta charset="UTF-8">
 <title>GitHub Pages (ユーザーページ)</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdn.auth0.com/js/auth0-spa-js/1.2/auth0-spa-js.production.js"></script>
+<script src="script.js"></script>
+    <style>
+      .hidden {
+        display: none;
+      }
+      
+      label {
+        margin-bottom: 10px;
+        display: block;
+      }
+    </style>
+
 </head>
 
 <body>
@@ -13,11 +27,34 @@
   <p id="current_url"></p>
 </main>
 
+<button id="btn-login" disabled="true" onclick="login()">Log in</button>
+<button id="btn-logout" disabled="true" onclick="logout()">Log out</button>
+    <!--ログイン後に表示-->
+    <div class="hidden" id="gated-content">
+      <p>
+        You're seeing this content because you're currently
+        <strong>logged in</strong>.
+      </p>
+      <label>
+        Access token: 
+        <pre id="ipt-access-token"></pre>
+      </label>
+      <label>
+        User profile:
+        <pre id="ipt-user-profile"></pre>
+      </label>
+
+      <label>
+          User profile Image:
+          <img src="" id="ipt-user-profile-image" width="200px">
+        </label>
+    </div>
+
 <script>
 console.log('GitHub Pages User Pages');
 
 jQuery( function() {
-    jQuery( '#current_url' ).text( location.href );
+    jQuery( '#current_url' ).text( location.origin );
 } );
 
 </script>
