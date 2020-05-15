@@ -17,7 +17,7 @@ const configureClient = async () => {
 window.onload = async () => {
   await configureClient();
 
-console.log("auth0 is : " + auth0);
+console.log("auth0 is : " + JSON.stringify(auth0));
 
   updateUI();
 
