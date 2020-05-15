@@ -58,10 +58,6 @@ const updateUI = async () => {
       await auth0.getUser()
     );
 
-    document.getElementById("ipt-app-metadata").innerHTML = JSON.stringify(
-      await auth0.getAppMetadata()
-    );
-
     //プロフ画像
     const profile = await auth0.getUser();
     document.getElementById("ipt-user-profile-image").src = profile.picture;
