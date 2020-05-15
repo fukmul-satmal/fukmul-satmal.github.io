@@ -17,8 +17,6 @@ const configureClient = async () => {
 window.onload = async () => {
   await configureClient();
 
-console.log("auth0 is : " + JSON.stringify(auth0));
-
   updateUI();
 
   const isAuthenticated = await auth0.isAuthenticated();
@@ -50,7 +48,7 @@ const updateUI = async () => {
   
   // NEW - add logic to show/hide gated content after authentication
 //  if (isAuthenticated) {
-    document.getElementById("gated-content").classList.remove("hidden");
+//    document.getElementById("gated-content").classList.remove("hidden");
 
     document.getElementById(
       "ipt-access-token"
