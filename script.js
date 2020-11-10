@@ -71,6 +71,8 @@ const updateUI = async () => {
 };
 
 const login = async () => {
+  console.log("domain is " + config.domain);
+
   await auth0.loginWithRedirect({
     redirect_uri: window.location.origin + APP_PATH
   });
