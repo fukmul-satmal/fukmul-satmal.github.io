@@ -15,6 +15,7 @@ const configureClient = async () => {
     client_id: "f2TFdb7QID12XZUwNW6mRO9AjdAEnFen",
     useRefreshTokens: true
   });
+  console.log("domain is " + config.domain);
 };
 
 window.onload = async () => {
@@ -71,7 +72,6 @@ const updateUI = async () => {
 };
 
 const login = async () => {
-  console.log("domain is " + config.domain);
 
   await auth0.loginWithRedirect({
     redirect_uri: window.location.origin + APP_PATH
