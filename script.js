@@ -30,21 +30,21 @@ window.onload = async () => {
     return;
   }
 
-//  // NEW - check for the code and state parameters
-//  const query = window.location.search;
-//  if (query.includes("code=") && query.includes("state=")) {
-//
-//    // Process the login state
-//    await auth0.handleRedirectCallback();
-//    console.log("await auth0.handleRedirectCallback() call.")
-//
-//    updateUI();
-//    console.log("updateUI() call.")
-//
-//    // Use replaceState to redirect the user away and remove the querystring parameters
-//    window.history.replaceState({}, document.title, APP_PATH);
-//    console.log("window.history.replaceState call.")
-//  }
+  // NEW - check for the code and state parameters
+  const query = window.location.search;
+  if (query.includes("code=") && query.includes("state=")) {
+
+    // Process the login state
+    await auth0.handleRedirectCallback();
+    console.log("await auth0.handleRedirectCallback() call.")
+
+    updateUI();
+    console.log("updateUI() call.")
+
+    // Use replaceState to redirect the user away and remove the querystring parameters
+    window.history.replaceState({}, document.title, APP_PATH);
+    console.log("window.history.replaceState call.")
+  }
 };
 
 const updateUI = async () => { 
