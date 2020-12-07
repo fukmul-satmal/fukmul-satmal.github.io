@@ -35,7 +35,7 @@ window.onload = async () => {
   if (query.includes("code=") && query.includes("state=")) {
 
     // Process the login state
-    await auth0.handleRedirectCallback();
+//    await auth0.handleRedirectCallback();
     
     updateUI();
 
